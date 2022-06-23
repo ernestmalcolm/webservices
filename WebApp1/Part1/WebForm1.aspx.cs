@@ -18,5 +18,23 @@ namespace WebApp1
         {
 
         }
+
+        protected void Clicksubmit_Click(object sender, EventArgs e)
+        {
+            bool namecheck = string.IsNullOrEmpty(nameBox.Text);
+            bool techlistcheck = string.IsNullOrEmpty(techList.SelectedValue);
+            if (namecheck == false && techlistcheck == false)
+            {
+                empty.Text = "Your name is " + nameBox.Text + " & your favourite technology is " + techList.SelectedItem;
+            }
+            else if (namecheck == false && techList.SelectedValue == "")
+            {
+                empty.Text = "Your name is " + nameBox.Text + " No technology ";
+            }
+            else
+            {
+                empty.Text = "No name enter ";
+            }
+        }
     }
 }

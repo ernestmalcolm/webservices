@@ -18,8 +18,11 @@
 </head>
 <body style="height: 500px">
     <form id="form1" runat="server" align="center">
+        Write your name:<br />
+        <asp:TextBox ID="nameBox" runat="server"></asp:TextBox>
+        <br />
         Pick favorite technology:<br />
-        <asp:DropDownList ID="DropDownList1" runat="server" Height="25px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="150px">
+        <asp:DropDownList ID="techList" runat="server" Height="25px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="150px">
             <asp:ListItem>Select technology</asp:ListItem>
             <asp:ListItem>ASP.Net</asp:ListItem>
             <asp:ListItem>ADO.Net</asp:ListItem>
@@ -27,8 +30,11 @@
         </asp:DropDownList>
         <br />
         Any comment on your technology?<br />
-        <asp:TextBox ID="TextBox1" runat="server" Height="100px" Width="300px"></asp:TextBox>
+        <asp:TextBox ID="commentBox" runat="server" Height="100px" Width="300px"></asp:TextBox>
         <br />
-        <input id="Submit1" type="submit" value="Submit" /></form>
+        <asp:Button ID="Clicksubmit" runat="server" Text="Submit" OnClick="Clicksubmit_Click" BorderColor="Black" BorderStyle="Solid" BorderWidth="2px" />
+
+    </form>
+    <asp:Label ID="empty" runat="server"></asp:Label>
 </body>
 </html>
